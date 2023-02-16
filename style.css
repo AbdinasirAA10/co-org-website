@@ -1,0 +1,437 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* header style */
+
+header{
+    padding: 10px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    position: fixed;
+    background: #0f0122;
+    align-items: left;
+    justify-content: left;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    overflow: hidden;
+}
+header .logo{
+    margin-left: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+header .nav-bar ul{
+    display: flex;
+    position: absolute;
+    right: 40px;
+    list-style: none;
+    top: 20px;
+    transition: 0s linear all;
+}
+
+header .nav-bar ul a{
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+}
+
+/* nav */
+header .menu-btn{
+    visibility: hidden;
+    width: 65px;
+    outline: none;
+    background: #00000027;
+    cursor: pointer;
+    padding: 2px;
+    position: absolute;
+    right: 10px;
+    border: 0.1px solid rgba(253, 253, 253, 0.009);
+    border-radius: 3px;
+}
+header .menu-btn div{
+    background: white;
+    margin: 5px;
+    width: 100%;
+    height: 1.6px;
+}
+header .menu-btn div:nth-child(0){
+    width: 100%;
+}
+
+header .menu-btn div:nth-child(1){
+    width: 85%;
+}
+header .menu-btn div:nth-child(2){
+    width: 65%;
+}
+header .menu-btn div:nth-child(3){
+    width: 45%;
+}
+header .menu-btn div:nth-child(4){
+    width: 35%;
+}
+header .menu-btn div:hover{
+    background-color: rgb(248, 0, 0);
+}
+
+/* phones and tabs menu / navigation bar / menu-btn and li */
+
+@media screen and (max-width:650px){
+    /* responding nav ul */
+    header .nav-bar{
+        transition: 3s linear all;
+    }
+    header .logo{
+        font-size: 13px;
+    }
+    
+    header .nav-bar ul{
+        border-top: 1px solid #f1f0f0;
+        justify-content: top;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        right: 0;
+        width: 150px;
+        list-style: none;
+        top: 60px;
+        transition: 3s linear all;
+        height: 100vh;
+        background: #0f0122;
+        text-align: center;
+    }
+    
+    header .nav-bar ul a{
+        transition: 3s linear all;
+        padding: 10px;
+        margin-top: 20px;
+        text-decoration: none;
+        color: white;
+        margin-left: 0px;
+        border-bottom: 1px solid #fff;
+        width: 100%;
+    }
+    header .nav-bar ul a:hover{
+        background: #ffffff4a;
+    }
+    /*  */
+    
+    header .nav-bar{
+        display: none;
+    }    
+header .menu-btn{
+    visibility: visible;
+}
+}
+
+
+/* end of nav */
+
+
+.home-page{
+    width: 100%;
+    height: 100vh;
+    background-image: url(imgs/XrgL6.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    line-height: 2.7;
+    /* background-attachment: fixed; */
+    padding: 10px;
+}
+
+.home-page p{
+    line-height: 1.3;
+}
+.home-page button{
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 2px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    color: white;
+    background: transparent;
+    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width:700px){
+    .home-page{
+       line-height: 1.1; 
+    }
+    .home-page h1{
+        font-size: 24px;
+        padding: 10px;
+        margin: 8px;
+    }
+    .home-page p{
+        line-height: 1.2;
+        margin: 10px;
+        font-size: 18px;
+    }
+    
+    
+}
+/* who-what who and what we do */
+
+.who-what{
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    line-height: 1.4;
+    border-bottom: 10px solid #0f0122;
+    border-bottom-right-radius: 90px;
+}
+.who-what div{
+    margin: 10px;
+}
+.who-what h1{
+    padding: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(4, 6, 82);
+}
+.who-what hr{
+    padding: 1px;
+}
+.who-what .det{
+    padding: 10px;
+}
+@media screen and (max-width:700px){
+    .who-what div{
+        margin: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+    .who-what h1{
+        padding: 5px;
+        font-size: 25px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: rgb(4, 6, 82);
+    }
+    .who-what p{
+        font-size: 16px;
+    }
+    
+}
+/* m-o mission and objectives */
+.m-o{
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+    padding: 10px;
+    line-height: 1.4;
+    flex-wrap: wrap;
+    border-bottom: 10px solid #0f0122;
+    border-bottom-left-radius: 90px;
+
+}
+.m-o div{
+    margin: 10px;
+}
+
+.m-o h1{
+    padding: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(4, 6, 82);
+}
+.m-o hr{
+    padding: 1px;
+}
+.m-o .det{
+    padding: 10px;
+}
+@media screen and (max-width:700px){
+    .m-o div{
+        margin: 10px;
+        padding: 10px;
+        width: 100%;
+    }    
+    .m-o h1{
+        padding: 1px;
+        font-size: 25px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .m-o p{
+        font-size: 16px;
+    }
+    
+}
+/* style about servive */
+
+.service{
+    width: 100%;
+    padding: 10px;
+}
+.service h1{
+    padding: 10px;
+    margin: 10px;
+}
+
+.box-card{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;    
+}
+.box-card .card{
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 300px;
+    padding: 10px;
+    box-shadow: 0.5px 0.5px 0.9px 0px rgba(0, 0, 0, 0.6);
+    border-radius: 3px;
+}
+.box-card .card:hover{
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.box-card .card h1{
+    text-align: left;
+    border-bottom: 1px solid #00000030;
+    font-size: 25px;
+}
+.box-card .card h1 b{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rebeccapurple;
+}
+.box-card .card p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+@media screen and (max-width:650px){
+    .box-card .card{
+        width: 90%;
+    }
+}
+
+/* about and contact us */
+.ab-con{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background: #aaa6a672;
+    /* color: white; */
+}
+.ab-con div{
+    margin: 10px;
+    padding: 15px;
+}
+.ab-con .abt h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px 10px 10px 0px;
+    margin: 10px;
+}
+.ab-con .abt hr{
+    padding: 5px;
+   border: 0.5px solid #cccccc39;
+   margin: 10px;
+}
+.ab-con .abt p{
+    padding: 2px;
+    margin-left: 10px;
+    font-size: 17px;
+}
+.ab-con .abt ul{
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.ab-con .abt img{
+    width: 40px;
+    margin-left: 20px;
+}
+/* cont */
+
+.ab-con .cont{
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+.ab-con .cont form{
+    padding: 10px;
+    margin: 10px;
+    line-height: 2.7;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.ab-con .cont form input{
+    padding: 5px;
+    margin: 2px;
+    width: 50%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000000;
+    background: transparent;
+    font-size: 15px;
+}
+.ab-con .cont form textarea{
+    padding: 10px;
+    margin: 2px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    width: 50%;
+    height: 100px;
+}
+.ab-con .cont form input[type=submit]{
+    padding: 10px;
+    margin: 2px;
+    border: none;
+    outline: none;
+    background: rgb(170, 1, 1);
+    color: white;
+    border-radius: 7px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.ab-con .cont form input[type=submit]:hover{
+    background: green;
+}
+
+@media screen and (max-width:700px){
+    .ab-con .cont form input{
+        width: 100%;
+    }
+    .ab-con .cont form textarea{
+        width: 100%;
+    }
+}
+/* keyframes */
+/* footer */
+.footer{
+    padding: 10px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: #000000;
+    color: whitesmoke;
+}
